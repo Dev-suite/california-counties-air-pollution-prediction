@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>AI Based Air Quality Prediction
+        </title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- All Neccessary CSS links -->
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:ital,wght@1,300&display=swap">
+        <!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+        <script src="https://cdn.rawgit.com/rikmms/progress-bar-4-axios/0a3acf92/dist/index.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+            <a class="navbar-brand" href="#">
+                <span>Pollution Predictor</span>
+                <ul class="list-unstyled">
+                  <!-- <li style="font-weight: bold;font-size: 15px;">JJAIBOT <span style="font-size: 12px;font-weight: lighter;font-style: italic;color: #F9A91A;">Initiative</span></li> -->
+                  
+              </ul>
+    
+            </a>
+              
+              <ul class="navbar-nav  mr-auto mt-2 mt-md-0 navbar-center">
+  
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="pollutantFather" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Pollutant
+                    </a>
+                    <div class="city dropdown-menu" aria-labelledby="navbarDropdownMenuLink" id="pollutant"> 
+                    <a class=" load dropdown-item" href="#" id="aqi">AQI</a>
+                    <a class=" load dropdown-item" href="#" id="co">CO</a>
+                    <a class=" load dropdown-item" href="#" id="pm25">PM2.5</a>
+                    </div>
+                </li>
+              </ul>
+
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+
+
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0 navbar-right">
+
+                <li class="nav-item dropdown">
+                    <a id="county" class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    City
+                    </a>
+                    <div class="city dropdown-menu" aria-labelledby="navbarDropdownMenuLink" id="city"> 
+                    <a class=" load dropdown-item" href="#" id="alameda">Alameda</a>
+                    <a class=" load dropdown-item" href="#" id="contra-costa">Contra Costa</a>
+                    <a class=" load dropdown-item" href="#" id="fresno">Fresno</a>
+                    <a class=" load dropdown-item" href="#" id="los-angeles">Los Angeles</a>
+                    <a class=" load dropdown-item" href="#" id="orange">Orange</a>
+                    <a class=" load dropdown-item" href="#" id="riverside">Riverside</a>
+                    <a class=" load dropdown-item" href="#" id="sacramento">Sacramento</a>
+                    <a class=" load dropdown-item" href="#" id="san-bernardino">San Bernardino</a>
+                    <a class=" load dropdown-item" href="#" id="san-diego">San Diego</a>
+                    <a class=" load dropdown-item" href="#" id="santa-clara">Santa Clara</a>
+                    </div>
+                </li>
+            </ul>
+            </div>
+          </nav>
+          
+        <!-- PAGE LOADER -->
+          <div class="rotor" id="rotor" style="visibility: hidden;"></div>
+
+
+        
+               <!-- PAGE HEADER -->
+               <div class="rtp-heading" >
+                  <div class="rtpcover"></div>
+
+                <!-- LEFT COLUMN ITEMS -->
+                               
+                      <div class="rtp-left">
+                          <div class="percentage"><span class="number"></span></div>
+
+                          <h1>AI Based Air Quality Prediction</h1>
+                      </div>
+  
+                      <div class="rtp-right ">
+                          <h3>Real Time Predictor</h3>
+                          <div class="now">
+                              <h3 id="current-time">Today</h3>
+                              <div class="nowdiv" id="nowdiv">
+                                <div class="card-body text-center" id="card-hour">
+                                    <p class="card-text" style="color: whitesmoke;" id="current-hour">
+                                    </p>
+                                        <!-- <p class="card-text" id="status-hour" style="color: whitesmoke; font-size: 35px;">
+                                        </p> -->
+                                        
+                                    </div>
+                              </div>
+                          </div>
+                          <div class="next">
+                              <h3>Tomorrow</h3>
+                              <div class="nextdiv" id="nextdiv">
+                                <div class="card-body text-center" id="next-card">
+                                    <p class="card-text" style="color: whitesmoke;" id="prediction">
+                                    </p>
+                                        <!-- <p class="card-text" id="status" style="color: whitesmoke; font-size: 35px;">
+                                        </p> -->
+                                    </div>
+
+                              </div>
+                          </div>
+                      </div>
+
+           </div>
+
+          <!-- PAGE HEADER ENDS HERE -->
+          <div class="second board text-left">
+            <h1 style="font-family:Bebas Neue,sans-serif"><i class="fa fa-minus" style="color: orangered;margin-right: 10px;"></i>Sources</h1>
+            <p style="font-family:Nunito,sans-serif">The main sources of PM 2.5 are:</p>
+            <ul style="list-style-type: none">
+                <li><i class="fa fa-check-circle" style="color: orangered;margin-right: 10px;"></i>Vehicles</li>
+                <li><i class="fa fa-check-circle" style="color: orangered;margin-right: 10px;"></i>Power Plants</li>
+                <li><i class="fa fa-check-circle" style="color: orangered;margin-right: 10px;"></i>Deforestation (Forest Fires, Wood Burning, Agricultural 
+                    Burning)</li>
+                    <li> <i class="fa fa-check-circle" style="color: orangered;margin-right: 10px;"></i>Environmental Disasters such as Volcanic 
+                        Eruption</li>
+            </ul>
+            
+        </div>
+
+        <div class="third board text-left">
+            <h1 style="font-family:Bebas Neue,sans-serif"><i class="fa fa-minus" style="color: orangered;margin-right: 10px;"></i>Effects</h1>
+            <p style="font-family:Nunito,sans-serif;font-size: 20px;">The fine particles stay in the air and are 
+                inhaled by 
+                humans which enter the nose or throat and 
+                reach 
+                down into the lungs and circulatory system.</p>
+        </div> 
+    </div>
+    <div class="fourth board text-center">
+        <h1>24-hour PM2.5 levels</h1>
+        <table class="table table-striped">
+            <thead class="thead-light">
+                <tr>
+                    <th>PM 2.5</th>
+                    <th>Air Quality Index</th>
+                    <th></th>
+                    <th>PM 2.5 Health</th>
+                    <th>Precautionary Action</th> 
+                </tr>
+
+            </thead>
+            <tbody>
+                <tr>
+                    <td>0 to 12.0</td>
+                    <td>Good 0 to 50</td>
+                    <td class="ta"></td>
+                    <td>Little to no risk.</td>
+                    <td>None.</td>
+                </tr>
+                <tr>
+                    <td>12.1 to 35.4</td>
+                    <td>Moderate 51 to 100</td>
+                    <td class="tb"></td>
+                    <td>Unusually sensitive individuals may expereience respiratory symptoms.</td>
+                    <td>Unusually sensitive people should consider reducing prolonged or heavy exertion.</td>
+                </tr>
+                <tr>
+                    <td>35.5 to 55.4</td>
+                    <td>Unhealthy for Sensitive Groups 101 to 150</td>
+                    <td class="tc"></td>
+                    <td>Increasing likelihood of respiratory symptoms in sensitive individuals, aggravation of heart or lung disease and premature mortality in persons with cardiopulmonary disease and the elderly.</td>
+                    <td>People with respiratory or heart disease, the elderly and children should limit prolonged exertion.</td>
+                </tr>
+
+                <tr>
+                    <td>55.5 to 150.4</td>
+                    <td>Unhealthy 151 to 200</td>
+                    <td class="td"></td>
+                    <td>Increased aggravation of heart or lung disease and premature mortality in persons with cardiopulmonary disease and the elderly; increased respiratory effects in general population.</td>
+                    <td>People with respiratory or heart disease, the elderly and children should avoid prolonged exertion; everyone else should limit prolonged exertion.</td>
+                </tr>
+                <tr>
+                    <td>150.5 to 250.4</td>
+                    <td>Very Unhealthy 201 to 300</td>
+                    <td class="te"></td>
+                    <td>Significant aggravation of heart or lung disease and premature mortality in persons with cardiopulmonary disease and the elderly; significant increase in respiratory effects in general population.</td>
+                    <td>People with respiratory or heart disease, the elderly and children should avoid any outdoor activity; everyone else should avoid prolonged exertion.</td>
+                </tr>
+                <tr>
+                    <td>250.5 to 500.4</td>
+                    <td>Hazardous 301 to 500</td>
+                    <td class="tf"></td>
+                    <td>Serious aggravation of heart or lung disease and premature mortality in persons with cardiopulmonary disease and the elderly; serious risk of respiratory effects in general population.</td>
+                    <td>Everyone should avoid any outdoor exertion; people with respiratory or heart disease, the elderly and children should remain indoors.</td>
+                </tr>
+            </tbody>
+           
+        </table>
+    </div>
+    
+
+            <!-- FOOTER STARTS HERE-->
+            <!-- <div class="footer ">
+                <div class="foothold row">
+                    <div class="footleft col-md-7">
+                        <p>© 2020 All Rights Reserved Terms of Use and <a href="https://jjaibot.org/privacy-policy">Privacy Policy</a></p>
+                        <img class="img-fluid" src="{{ url_for('static', filename='images/Group 30.png')}}" alt="">
+                    </div>
+                    <div class="footright col-md-5">
+
+                        <a href="https://www.facebook.com/jjaibot"><img class="img-fluid" src="{{url_for('static', filename='images/facebook.png')}}" alt=""></a>
+                        <a href="https://www.twitter.com/jjaibot"><img class="img-fluid" src="{{url_for('static', filename='images/twitter.png')}}" alt=""> </a>
+                        <a href="https://www.instagram.com/jjaibot"><img class="img-fluid" src="{{url_for('static', filename='images/instagram.png')}}" alt=""></a>
+                    </div>
+                </div>
+            </div> -->
+
+            
+
+    <script src="{{ url_for('static', filename='jq/jquery.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/script.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/data.js') }}" type="text/javascript"></script>  
+    <script type="text/javascript">
+        // loadProgressBar();
+        $(document).ready(function(){
+            let parameter = "co";
+            $("#co").click(function() {
+                parameter = "co";
+                document.getElementById('pollutantFather').innerHTML = parameter;
+            })
+
+            $("#pm25").click(function() {
+                parameter = "pm25";
+                document.getElementById('pollutantFather').innerHTML = parameter;
+            })
+
+            $("#aqi").click(function() {
+                parameter = "aqi";
+                document.getElementById('pollutantFather').innerHTML = parameter.toUpperCase();
+            })
+
+            $("#alameda").click(function(){
+                $(".rotor").css("visibility" , "visible");
+                document.getElementById('county').innerHTML = "Alameda";
+                getPlotData('alameda', parameter)
+                
+            });
+            $("#contra-costa").click(function(){
+                $(".rotor").css("visibility" , "visible");
+                document.getElementById('county').innerHTML = "Contra-Costa";
+                getPlotData('contra-costa', parameter)
+            });
+            $("#fresno").click(function(){
+                $(".rotor").css("visibility" , "visible");
+                document.getElementById('county').innerHTML = "Fresno";
+                getPlotData('fresno', parameter)
+            });
+            $("#orange").click(function(){
+                $(".rotor").css("visibility" , "visible");
+                document.getElementById('county').innerHTML = "Orange";
+                getPlotData('orange', parameter)
+            });
+            $("#los-angeles").click(function(){
+                $(".rotor").css("visibility" , "visible");
+                document.getElementById('county').innerHTML = "Los-Angeles";
+                getPlotData('los-angeles', parameter)
+            });
+            $("#riverside").click(function(){
+                $(".rotor").css("visibility" , "visible");
+                document.getElementById('county').innerHTML = "Riverside";
+                getPlotData('riverside', parameter)
+            });
+            $("#sacramento").click(function(){
+                $(".rotor").css("visibility" , "visible");
+                document.getElementById('county').innerHTML = "Sacramento";
+                getPlotData('sacramento', parameter)
+            });
+            $("#san-bernardino").click(function(){
+                $(".rotor").css("visibility" , "visible");
+                document.getElementById('county').innerHTML = "San-Bernardino";
+                getPlotData('san-bernardino', parameter)
+            });
+            $("#san-diego").click(function(){
+                $(".rotor").css("visibility" , "visible");
+                document.getElementById('county').innerHTML = "San-Diego";
+                getPlotData('san-diego', parameter)
+            });
+            $("#santa-clara").click(function(){
+                $(".rotor").css("visibility" , "visible");
+                document.getElementById('county').innerHTML = "Santa-Clara";
+                getPlotData('santa-clara', parameter)
+            });
+        })
+        </script> 
+</div>
+
+
+
+    <!-- All Neccessary script Links -->
+
+
+</body>
+
+</html>

@@ -1,0 +1,1552 @@
+/* GENERAL SETTINGS WEB */
+
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: Arial;
+    color: black;
+    transition: ease-in-out .7s;
+    outline: none;
+}
+/* .active{
+    font-size: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border-left-color: transparent;
+    animation: rotate 1.4s ease 0.5s infinite;
+}
+@keyframes rotate{
+    0%{
+        transform: rotate(360deg);
+    }
+}
+.success{
+    position: relative;
+    background-color: #fff;
+    animation: bounce .3s ease-in;
+
+}
+.success:before{
+    content: '';
+    position: absolute;
+    background: url(check-solid.svg) no-repeat;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    height:  31px;
+    line-height: 31px;
+    top: 8px;
+} */
+
+.rotor{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 5px solid #ff8000;
+    border-left-color: transparent;
+    background-color: transparent;
+    animation: rotate 2s ease-in-out  infinite;
+    position: fixed;
+    z-index: 30;
+    top: 50%;
+    left: 50%;
+    /* visibility: hidden; */
+}
+@keyframes rotate{
+    0%{
+        transform: rotate(360deg);
+    }
+}
+.navbar-brand img{
+    width: 100px;
+    height: auto;
+}
+
+/* FOOTER GENERAL WEB */
+.footer{
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    text-align: center;
+    justify-content: center;
+    padding: 5%;
+    margin-top: 2.5% auto;
+    box-shadow: 1px 1px 6px grey;
+}
+.foothold{
+    margin: auto;
+    position: relative;
+    top: 50%;
+}
+.footright img{
+    width: 40px;
+    height: 40px;
+    margin: auto 5%;
+    margin-top: 2.5%;
+}
+
+/*  *GENERAL SETTINGS END HERE*/
+
+
+
+
+/* REAL TIME PREDICTOR WEB STARTS HERE */
+.rtp-heading{
+    width: 100vw;
+    height: 90vh;
+    background-image: url("../images/air-head.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+.rtp-heading *{
+    border: none;
+}
+.rtpcover{
+    width: inherit;
+    height: inherit;
+    background-color: #000;
+    opacity: .8;
+
+}
+.rtp-left{
+    position: absolute;
+    left: 15%;
+    top: 20%;
+    width: 30%;
+    height: auto;
+}
+.rtp-left h1{
+    font-size: 90px;
+    color: white;
+}
+.rtp-right{
+    position: absolute;
+    right: 10%;
+    top: 35%;
+    width: 30%;
+    height: auto;
+}
+.rtp-left, .rtp-right{
+    z-index: 20;
+}
+.rtp-right *{
+    color: white;
+
+}
+.percentage{
+    background-color: #fff!important;
+
+    color: white;
+    z-index: 12;
+
+}
+
+
+.head-right{
+    width: 30%;
+    height: 70%;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+}
+.head-right h1{
+    font-size: 80px;
+    color: white;
+    font-family: "Arial Rounded MT";
+}
+.percentage{
+    width: 10vw;
+    height: 5vh;
+}
+.head-left{
+    top: 20%;
+    right: 10%;
+    width: 30%;
+    height: 70%;
+    position: absolute;  
+}
+.head-left p{
+    color: white;
+    font-size: 40px;
+}
+.head-left .shower{
+    width: 35%;
+    height: 80%;
+}
+.head-left .shower .monitor{
+    width: 15vw;
+    height: 5vh;
+    background-color: #434F53;
+}
+.board{
+    width: 100%;
+    height: auto;
+    z-index: 8;
+}
+.second, .third{
+    margin: 5% 0;
+    padding: 0 5%;
+    text-align: justify;
+}
+
+.second p, .third p{
+    font-size: 30px!important;
+}
+
+.third h1, .second h1{
+    font-size: 40px!important;
+
+}
+.fourth{
+    display: block;
+}
+.fourth h1{
+    font-size: 40px!important;
+    text-align: center;
+    padding: 10px;
+}
+.ta{
+    background-color: #03ee17!important;
+}
+.tb{
+    background-color: #adfa99!important;
+}
+.tc{
+    background-color: #c5fab8!important;
+}
+.td{
+    background-color: #ffa705!important;
+}
+.te{
+    background-color: #ff1e1e!important;
+}
+.tf{
+    background-color: #970000!important;
+}
+
+/* REAL TIME PREDICTOR WEB ENDS HERE */
+
+
+
+.nav-but{
+    background-color: #ff8000;
+    border: none;
+    padding: 0 10px;
+    border-radius: 10px;
+}
+.nav-but .nav-link{
+    color: white!important;
+    font-weight: 200;
+}
+.but{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fff;
+    color: black!important;
+}
+.but:hover{
+    background-color: rgb(133, 133, 133);
+}
+
+.carousel-item{
+    width: 100vw;
+    height: 90vh;
+    overflow-y: hidden;
+}
+.carousel-item img{
+    width: 100%;
+    height: auto;
+}
+.carousel-item  *{
+    color: white;
+    font-family: Arial;
+}
+.carousel-item{
+    position: relative;
+}
+.info-left{
+    width: 40%;
+    height: auto;
+    text-align: left;
+}
+.info-left:nth-child(3){
+    position: absolute;
+    top: 60%;
+}
+.info-left h1{
+    font-size: 60px;
+    font-family: Arial Rounded MT;
+}
+.info-left p{
+    font-size: 20px;
+}
+.info-right{
+    width: 60%;
+    position: absolute;
+    top: 15%;
+    padding: 2.5%;
+    right: -10%;
+    text-align: left;
+    padding-left: 15%;
+}
+.butcol{
+    background-color: #ff8000!important;
+    padding: 5px 30px;
+    border: none;
+}
+.carousel-caption{
+    position: absolute;
+    top: 15%;
+    width: auto;
+}
+
+.carousel-buttons:hover{
+    background-color: #000;
+    opacity: .3;
+}
+
+
+
+
+/* COVID-19 EARLY SCAN WEB START HERE */
+
+.cov-heading{
+    width: 100%;
+    height: 60vh!important;
+    background-image: url("../images/ct.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    /* overflow: hidden; */
+    position: relative;
+}
+.cov-heading *{
+    border: none;
+}
+.cover{
+    width: inherit;
+    height: inherit;
+    background-color: #000;
+    opacity: .8;
+
+}
+.hcov-left{
+    position: absolute;
+    left: 15%;
+    top: 10%;
+    width: 80%;
+    padding: 10%;
+    padding-top: 0%;
+    height: auto;
+}
+.hcov-left h1{
+    font-size: 80px!important;
+    color: white!important;
+}
+.hcov-right{
+    width: auto;
+    height: auto;
+}
+.hcov-right button{
+    border-radius: 50px;
+    background-color: #ff8000;
+    padding: 5px 50px!important;
+    font-size: 20px;
+    border: none;
+    color: white;
+}
+.listed{
+    position: absolute;
+    top: auto;
+    right: 0%;
+    font-size: 17px;
+}
+#imt{
+    font-weight: 100;
+    color: white;
+    position: relative;
+
+}
+.cnav{
+    padding: 0;
+    background-color: white!important;
+    color: black;
+}
+.covlist{
+    position: absolute;
+    top: 70%;
+    right: 60%;
+}
+.choice{
+    position: absolute;
+    top: 71%;
+    right: 20%;
+}
+.hco-btn{
+    position: absolute;
+    top: 70%;
+    left: 40%;
+}
+.middle{
+    width: auto;
+    height: auto;
+    margin-top: 2.5%;
+}
+.mid{
+    margin: auto;
+    height: auto;
+}
+.middle .card .card-header{
+    background-color: inherit;
+}
+.card-header h1{
+    font-size: 25px!important;
+    margin-top: 50px!important;
+}
+.card{
+    padding: 5%;
+    padding-bottom: 0;
+}
+.card-btn{
+    font-size: 20px;
+    padding: 10px 15px;
+    border: none;
+    background-color:#ff8000;
+    margin: 5% 5%;
+}
+.card-btn:hover{
+    background-color: rgb(196, 74, 4);
+}
+.secmid{
+    width: 100%;
+    height: auto;
+    margin-top: 5px!important;
+}
+.seccard *{
+    border: none;
+}
+
+.seccard{
+    text-align: center;
+    width: 80%;
+    height: inherit;
+    margin: auto;
+}
+.seccard .card-header{
+    background-color: inherit;
+
+}
+.seccard .card-header h1{
+    font-size: 40px;
+    font-weight: 600!important;
+}
+.seccard .card-body p{
+    font-weight: bold!important;
+}
+.picbod{
+    width: 150px;
+    height: auto;
+}
+
+/* COVID-19 EARLY SCAN WEB ENDS HERE */
+
+
+
+
+/* CROP WEB STARTS HERE */
+
+
+/*Early Crop Disease Detection*/
+.crop-heading{
+    width: 100vw;
+    height: 90vh;
+    background-image: url("../images/coco.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+.cropcover{
+    width: inherit;
+    height: inherit;
+    background-color: black;
+    opacity: .8;
+}
+.crop-but{
+    padding: 2.5% 10%;
+    position: absolute;
+    left: 0;
+    margin-top: 20px;
+    background-color: #ff8000;
+    color: white;
+    border: none;
+    border-radius: 20px;
+
+}
+.crop-left, .crop-right{
+    width: 50%;
+    height: inherit;
+    z-index: 10;
+}
+.crop-left{
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    margin: auto;
+}
+.crop-right{
+    position: absolute;
+    top: 35%;
+    right: 15%;
+    display: block;
+    width: auto;
+}
+.crop-right label{
+    color: white;
+    padding: 2.5%;
+}
+.crop-heading h1{
+    font-size: 120px;
+    color: white;
+}
+.cropmid{
+    width: 100vw;
+    height: auto;
+    text-align: center;
+    padding: 2.5%;
+}
+.croplist .dropdown{
+    border: none;
+    color: white;
+    padding: 5% 0;
+}
+.croplist .dropdown a{
+    text-decoration: none;
+    color: white;
+}
+
+.cropmid .card{
+    width: 80vw;
+    margin: auto;
+    
+}
+
+
+/* CROP WEB ENDS HERE */
+
+
+
+
+
+
+
+
+/* MOBILE RESPONSIVENESS */
+
+
+
+@media (orientation: portrait) and (max-device-width: 1024px) {
+
+    /* GENERAL SETTINGS */
+
+
+    *{
+        margin: 0;
+        padding: 0;
+        scroll-behavior: smooth;
+        font-family: Arial;
+        color: black;
+    }
+    .nav-item > *{
+        background-color: #fff!important;
+        color: black!important;
+    }
+    h1{
+        font-size: 60px!important;
+    }
+    p{
+        font-size: auto!important;
+    }
+    .head-right{
+        display: block;
+        clear: both!important;
+    }
+    .head-right h1{
+        text-align: justify;
+    }
+
+
+    /*MOBILE FOOOTER GENERAL */
+    .footer{
+        width: 100%;
+        height: auto;
+        background-color: #fff;
+        text-align: center;
+        justify-content: center;
+        padding: 5%;
+        margin-top: 2.5% auto;
+        box-shadow: 1px 1px 6px grey;
+    }
+    .foothold{
+        margin: auto;
+    }
+    .footright img{
+        width: 40px;
+        height: 40px;
+    }
+    /* GENERAL SETTINGS END HERE */
+
+
+
+    /* COVID-19 EARLY SCAN MOBILE START HERE */
+
+    .cov-heading{
+        width: 100%;
+        height: 60vh!important;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-x: center;
+        /* overflow: hidden; */
+        position: relative;
+    }
+    .cov-heading *{
+        border: none;
+    }
+    .cover{
+        width: inherit;
+        height: inherit;
+        background-color: #000;
+        opacity: .8;
+    }
+    .choice{
+        position: absolute;
+        top: 90%;
+        left: 35%;
+    }
+    .hcov-left{
+        position: absolute;
+        left: 15%;
+        top: 10%;
+        width: 80%;
+        padding: 10%;
+        padding-top: 0%;
+        height: auto;
+    }
+    .hcov-left h1{
+        font-size: 45px!important;
+        color: white!important;
+    }
+    .hcov-right{
+        width: auto;
+        height: auto;
+    }
+    .hcov-right button{
+        border-radius: 50px;
+        background-color: #ff8000;
+        padding: 5px 50px!important;
+        font-size: 20px;
+        border: none;
+        color: white;
+    }
+    .listed{
+        position: absolute;
+        top: auto;
+        right: 0%;
+    }
+    .cnav{
+        padding: 0;
+        background-color: white!important;
+        color: black;
+    }
+    .covlist{
+        position: absolute;
+        top: 60%;
+        right: 30%;
+    }
+    .hco-btn{
+        position: absolute;
+        top: 75%;
+        left: 30%;
+    }
+    .middle{
+        width: auto;
+        height: auto;
+        margin-top: 5%;
+    }
+    .mid{
+        margin: auto;
+        height: auto;
+    }
+    .middle .card .card-header{
+        background-color: inherit;
+    }
+    .card-header h1{
+        font-size: 25px!important;
+        margin-top: 50px!important;
+    }
+    .card{
+        padding: 5%;
+        padding-bottom: 0;
+    }
+    .card-btn{
+        font-size: 20px;
+        padding: 10px 15px;
+        border: none;
+        background-color:#ff8000;
+        margin: 5% 5%;
+    }
+    .card-btn:hover{
+        background-color: rgb(196, 74, 4)!important;
+    }
+    .secmid{
+        width: 100%;
+        height: auto;
+        margin-top: 5px!important;
+    }
+    .seccard *{
+        border: none;
+    }
+
+    .seccard{
+        text-align: center;
+        width: 80%;
+        height: inherit;
+        margin: auto;
+    }
+    .seccard .card-header{
+        background-color: inherit;
+
+    }
+    .seccard .card-header h1{
+        font-size: 40px;
+        font-weight: 600!important;
+    }
+    .seccard .card-body p{
+        font-weight: bold!important;
+    }
+    .picbod{
+        width: 150px;
+        height: auto;
+    }
+
+    /* COVID-19 EARLY SCAN MOBILE ENDS HERE */
+
+
+
+/* REAL TIME PREDICTOR MOBILE STARTS HERE*/
+
+    .rtp-heading{
+        width: 100vw;
+        height: 90vh;
+        background-image: url("../images/air-head.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: relative;
+    }
+    .rtp-heading *{
+        border: none;
+    }
+
+    .rtpcover{
+        width: inherit;
+        height: inherit;
+        background-color: #000;
+        opacity: .8;
+        padding: 0;
+    }
+    .percentage{
+        background-color: #fff!important;
+        text-align: center;
+        justify-self: center;
+    }
+    .rtp-left{
+        width: 100%;
+        height: auto;
+        margin: auto;
+        padding: 0;
+        position: absolute;
+        left: 10%;
+    }
+    .rtp-left h1{
+        font-size: 60px;
+        color: white;
+        text-align: left;
+    }
+    .rtp-right{
+        width: 80%;
+        height: auto;
+        position: absolute;
+        top: 60%;
+
+    }
+    .rtp-left, .rtp-right{
+        z-index: 20;
+    }
+    .rtp-right *{
+        color: white;
+
+    }
+
+
+
+/* REAL TIME PREDICTOR MOBILE ENDS HERE*/
+
+
+/* WILDLIFE MOBILE STARTS HERE */
+    .nav-but{
+        background-color: transparent!important;
+        border: none;
+        padding: 0!important;
+    }
+    .nav-but .nav-link{
+        color: black!important;
+        font-weight: 200;
+    }
+    .but{
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #fff;
+        color: black!important;
+    }
+    .but:hover{
+        background-color: rgb(133, 133, 133);
+    }
+    .carousel-item{
+        width: 100vw;
+        height: auto;
+    }
+    .carousel-item img{
+        width: 100%;
+        height: auto;
+    }
+    .carousel-item  *{
+        color: white;
+        font-family: Arial!important;
+    }
+    .carousel-item{
+        position: relative;
+        height: 100vh;
+    }
+    .carousel-item img{
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: inherit;
+        background-position-x: center;
+        width: inherit;
+    }
+    .info-left{
+        width: 100%;
+        height: 60vh;
+        padding: 0;
+        position: absolute;
+        top: 0%;
+        text-align: left;
+        margin: auto;
+    }
+    .info-left h1{
+        font-size: 40px!important;
+        margin-bottom: 10px;
+    }
+    .info-left p{
+        font-size: 15px;
+        text-align: justify;
+        margin-bottom: 10px;
+    }
+    .info-right{
+        position: absolute;
+        top: 60%;
+        left: -20%;
+        width: 100vw;
+    }
+    .info-right *{
+        margin-bottom: 10px;
+    }
+    .butcol{
+        background-color: #ff8000!important;
+        padding: 2.5px 15px;
+        border: none;
+    }
+
+
+    
+/* CROP MOBILE STARTS HERE */
+
+
+    /*Early Crop Disease Detection*/
+    .crop-heading{
+        width: 100%;
+        height: 70vh!important;
+        background-image: url("../images/coco.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin: 0;
+        padding: 0;
+        position: relative;
+    }
+    .cropcover{
+        width: inherit;
+        height: inherit;
+        background-color: black;
+        opacity: .8;
+    }
+    .crop-left, .crop-right{
+        width: 50%;
+        height: inherit;
+        z-index: 10;
+    }
+    .crop-left{
+        width: 70%;
+        position: absolute;
+        top: 15%;
+        left: 15%;
+        margin: auto;
+    }
+    .crop-right{
+        position: absolute;
+        top: 65%;
+        left: 30%;
+        width: 70%;
+        display: flex;
+        text-align: center;
+    }
+
+    .crop-left h1{
+        font-size: 50px!important;
+        color: white;
+        text-align: center;
+    }
+    .cropmid{
+        width: 100vw;
+        height: auto;
+        text-align: center;
+        padding: 2.5%;
+    }
+    .cropmid h1{
+        font-size: 40px!important;
+        padding: 5%;
+        font-weight: 500!important;
+    }
+    .croplist .dropdown{
+        border: none;
+        color: white;
+        padding: 5% 0;
+    }
+    .croplist .dropdown a{
+        text-decoration: none;
+        color: white;
+    }
+
+    .cropmid .card{
+        width: 80%;
+        padding: 0;
+        margin: auto;
+        border: black solid 1px;
+        padding: 10%;
+    }
+
+    .crop-but{
+        padding: 2.5% 10%;
+        position: absolute;
+        left: 0;
+        margin-top: 20px;
+        background-color: #ff8000;
+        color: white;
+        border: none;
+        border-radius: 20px;
+    }
+
+/* CROP MOBILE ENDS HERE */
+
+
+
+}
+
+
+
+
+
+
+/* MOBILE SCREEN SIZEE SMALLER THAN 768PX STARTS HERE*/
+@media (orientation: portrait) and (max-device-width: 767px) {
+
+
+    .nav-but{
+        background-color: transparent!important;
+        border: none;
+        padding: 0!important;
+    }
+    .nav-but .nav-link{
+        color: black!important;
+        font-weight: 200;
+    }
+    .but{
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #fff;
+        color: black!important;
+    }
+    .but:hover{
+        background-color: rgb(133, 133, 133);
+    }
+    .carousel-item{
+        width: 100vw;
+        height: auto;
+    }
+    .carousel-item img{
+        width: 100%;
+        height: auto;
+    }
+    .carousel-item  *{
+        color: white;
+        font-family: Arial!important;
+    }
+    .carousel-item{
+        position: relative;
+        height: 100vh;
+    }
+    .carousel-item img{
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: inherit;
+        background-position-x: center;
+        width: inherit;
+    }
+    .info-left{
+        width: 100%;
+        height: 60vh;
+        padding: 0;
+        position: absolute;
+        top: 0%;
+        text-align: left;
+        margin: auto;
+    }
+    .info-left h1{
+        font-size: 35px!important;
+        margin-bottom: 10px;
+    }
+    .info-left p{
+        font-size: 12.5px;
+        text-align: justify;
+        margin-bottom: 2.5px;
+    }
+    .info-right{
+        position: absolute;
+        top: 50%;
+        left: -20%;
+        width: 80vw;
+        margin: auto;
+    }
+    .info-right *{
+        margin-bottom: 2.5px;
+    }
+    .info-right p *{
+        font-size: 10px;
+    }
+    .butcol{
+        background-color: #ff8000!important;
+        padding: 2.5px 15px;
+        border: none;
+    }
+
+
+    /* CROP LEFT */
+
+    .crop-left h1{
+        font-size: 40px!important;
+    }
+    .crop-but{
+        position: absolute;
+        top: 15%;
+        left: 10%;
+    }
+    #file{
+        position: absolute;
+        top: 0%;
+        left: 10%!important;
+    }
+    .cropmid h1{
+        font-size: 25px!important;
+        font-weight: 400;
+    }
+    .cropmid .card{
+        border: black solid 1px;
+    }
+
+    /* CROP PAGE ENDS HERE */
+
+    /* COVID 19 STARTS HERE */
+    .cov-heading{
+        width: 100%;
+        height: 60vh!important;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-x: center;
+        /* overflow: hidden; */
+        position: relative;
+    }
+    .cov-heading *{
+        border: none;
+    }
+    .cover{
+        width: inherit;
+        height: inherit;
+        background-color: #000;
+        opacity: .8;
+
+    }
+    .hcov-left{
+        position: absolute;
+        left: 15%;
+        top: 10%;
+        width: 80%;
+        padding: 10%;
+        padding-top: 0%;
+        height: auto;
+    }
+    .hcov-left h1{
+        font-size: 35px!important;
+        color: white!important;
+    }
+    .hcov-right{
+        width: auto;
+        height: auto;
+    }
+    .hcov-right button{
+        border-radius: 50px;
+        background-color: #ff8000;
+        padding: 5px 50px!important;
+        font-size: 20px;
+        border: none;
+        color: white;
+    }
+    .listed{
+        position: absolute;
+        top: auto;
+        right: 0%;
+    }
+    .cnav{
+        padding: 0;
+        background-color: white!important;
+        color: black;
+    }
+    .covlist{
+        position: absolute;
+        top: 60%;
+        right: 30%;
+    }
+    .hco-btn{
+        position: absolute;
+        top: 75%;
+        left: 27.5%;
+    }
+
+    /* COVID 19 PAGE ENDS HERE */
+
+
+    /* WILDLIFE PAGE STARTS HERE */
+    .nav-but{
+        background-color: transparent!important;
+        border: none;
+        padding: 0!important;
+    }
+    .nav-but .nav-link{
+        color: black!important;
+        font-weight: 200;
+    }
+    .but{
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #fff;
+        color: black!important;
+    }
+    .but:hover{
+        background-color: rgb(133, 133, 133);
+    }
+    .carousel-item{
+        width: 100vw;
+        height: auto;
+    }
+    .carousel-item img{
+        width: 100%;
+        height: auto;
+    }
+    .carousel-item  *{
+        color: white;
+        font-family: Arial!important;
+    }
+    .carousel-item{
+        position: relative;
+        height: 100vh;
+    }
+    .carousel-item img{
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: inherit;
+        background-position-x: center;
+        width: inherit;
+    }
+    .info-left{
+        width: 100%;
+        height: 60vh;
+        padding: 0;
+        position: absolute;
+        top: -10%;
+        text-align: left;
+        margin: auto;
+    }
+    .info-left h1{
+        font-size: 30px!important;
+        margin-bottom: 10px;
+    }
+    .info-left p{
+        font-size: 15px;
+        text-align: justify;
+        margin-bottom: 10px;
+    }
+    .info-right{
+        position: absolute;
+        top: 50%;
+        left: -20%;
+        width: 100vw;
+    }
+    .info-right *{
+        margin-bottom: 10px;
+    }
+    .info-right .form-check, .info-right .butcol, .info-right small{
+        margin-bottom: 0px;
+    }
+    .info-right small{
+        font-size: 10px;
+        position: absolute;
+        top: 70%;
+    }
+    .butcol{
+        background-color: #ff8000!important;
+        padding: 2.5px 15px;
+        border: none;
+    }
+
+    /* WILDLIFE ENDS HERE */
+
+
+    
+    /* MOBILE SMALLER Early Crop Disease Detection*/
+    .crop-heading{
+        width: 100%;
+        height: 70vh!important;
+        background-image: url("../images/coco.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin: 0;
+        padding: 0;
+        position: relative;
+    }
+    .cropcover{
+        width: inherit;
+        height: inherit;
+        background-color: black;
+        opacity: .8;
+    }
+    #file{
+        position: absolute;
+
+}
+    .crop-left, .crop-right{
+        width: 100%;
+        height: 60vh;
+        z-index: 10;
+    }
+    .crop-left{
+        width: 80%;
+        position: absolute;
+        top: 15%;
+        left: 10%;
+        margin: auto;
+    }
+    .crop-right{
+        position: absolute;
+        bottom: 25%;
+        left: 30%;
+        width: 80%;
+        display: flex;
+        text-align: center;
+    }
+
+    .crop-left h1{
+        font-size: 30px!important;
+        color: white;
+        text-align: center;
+    }
+    
+    .crop-but{
+        padding: 2.5% 10%;
+        position: absolute;
+        left: 10%;
+        margin-top: 20px;
+        background-color: #ff8000;
+        color: white;
+        border: none;
+        border-radius: 20px;
+    }
+    .cropmid{
+        width: 100vw;
+        height: auto;
+        text-align: center;
+        padding: 2.5%;
+    }
+    .cropmid h1{
+        font-size: 40px!important;
+        padding: 5%;
+        font-weight: 500!important;
+    }
+    .croplist .dropdown{
+        border: none;
+        color: white;
+        padding: 5% 0;
+    }
+    .croplist .dropdown a{
+        text-decoration: none;
+        color: white;
+    }
+
+    .cropmid .card{
+        width: 80%;
+        padding: 0;
+        margin: auto;
+        border: black solid 1px;
+        padding: 10%;
+    }
+
+
+/* CROP MOBILE SMALLER ENDS HERE */
+}
+
+
+/* MOBILE SCREEN SIZEE SMALLER THAN 768PX ENDS HERE*/
+
+
+
+
+
+
+
+
+
+/* TABLET (IPAD ABOVE BUT NOT DESKTOP) MEDIA QUERY ATARTS HERE*/
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2){
+
+
+    /* COVID 19 TABLET STARTS HERE*/
+    .cov-heading{
+        width: 100%;
+        height: 45vh!important;
+        background-image: url("../images/ct.png");
+        /* overflow: hidden; */
+        position: relative;
+    }
+    
+    .hcov-left{
+        position: absolute;
+        left: 15%;
+        top: 15%;
+        width: 80%;
+        padding: 10%;
+        padding-top: 0%;
+        height: auto;
+    }
+    .hcov-left h1{
+        font-size: 70px!important;
+        color: white!important;
+        text-align: center;
+    }
+    .hcov-right{
+        width: auto;
+        height: auto;
+        
+    }
+    .hcov-right button{
+        border-radius: 50px;
+        background-color: #ff8000;
+        padding: 5px 50px!important;
+        font-size: 20px;
+        border: none;
+        color: white;
+    }
+    .listed{
+        position: absolute;
+        top: auto;
+        right: 0%;
+        font-size: 17px;
+    }
+    .covlist{
+        position: absolute;
+        top: 71%;
+        right: 50%;
+    }
+    .hco-btn{
+        position: absolute;
+        top: 85%;
+        left: 65%;
+    }
+    .choice{
+        position: absolute;
+        top: 71%;
+        left: 45%;
+    }
+
+    /* COVID 19 TABLET ENDS HERE*/
+
+
+/* REAL TIME PREDICTOR TABLET STARTS HERE */
+    .rtp-heading{
+        width: 100%;
+        height: 60vh;
+        background-image: url("../images/air-head.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: relative;
+    }
+    .rtp-heading *{
+        border: none;
+    }
+
+    .rtpcover{
+        width: inherit;
+        height: inherit;
+        background-color: #000;
+        opacity: .8;
+        padding: 0;
+    }
+    .percentage{
+        background-color: #fff!important;
+        text-align: center;
+        justify-self: center;
+    }
+    .rtp-left{
+        width: 100%;
+        height: auto;
+        margin: auto;
+        padding: 0;
+        position: absolute;
+        left: 10%;
+    }
+    .rtp-left h1{
+        font-size: 60px;
+        color: white;
+        text-align: left;
+    }
+    .rtp-right{
+        width: 80%;
+        height: auto;
+        position: absolute;
+        top: 55%;
+
+    }
+    .rtp-left, .rtp-right{
+        z-index: 20;
+    }
+    .rtp-right *{
+        color: white;
+
+    }
+
+
+
+/* REAL TIME PREDICTOR TABLET ENDS HERE */
+    
+
+    /* WILDLIFE TABLET STARTS HERE */
+
+    .nav-but{
+        background-color: #ff8000;
+        border: none;
+    }
+    .nav-but .nav-link{
+        color: black!important;
+        font-weight: 200;
+    }
+    .carousel-item{
+        width: 100vw;
+        height: auto;
+    }
+    .carousel-item img{
+        width: 100%;
+        height: auto;
+    }
+    .info-left{
+        width: 100%;
+        height: 60vh;
+        padding: 0;
+        position: absolute;
+        top: 0%;
+        text-align: left;
+        margin: auto;
+    }
+    .info-left h1{
+        font-size: 40px!important;
+        margin-bottom: 10px;
+    }
+    .info-left p{
+        font-size: 15px;
+        text-align: justify;
+        margin-bottom: 10px;
+    }
+    .info-right{
+        position: absolute;
+        top: 60%;
+        left: -10%;
+        width: 100vw;
+    }
+    .info-right *{
+        margin-bottom: 10px;
+    }
+    .butcol{
+        background-color: #ff8000!important;
+        padding: 2.5px 15px;
+        border: none;
+    }
+
+    /* CROP TABLET STARTS HERE */
+
+    .crop-heading{
+        height: 40vh!important;
+    }
+    #file{
+        position: absolute;
+        top: 10%;
+
+    }
+    .crop-but{
+        position: absolute;
+        top: 4.5%;
+        left: 50%!important;
+        border-radius: 50px;
+        padding: 2% 5%;
+    }
+    /* .crop-right{
+        width: auto!important;
+    }
+    .crop-left h1{
+        font-size: 60px!important;
+    }
+
+    #file{
+        position: absolute;
+        top: 10%;
+
+    }
+    .crop-but{
+        position: absolute;
+        top: 5%;
+        left: 50%!important;
+        border-radius: 50px;
+    } */
+
+}
